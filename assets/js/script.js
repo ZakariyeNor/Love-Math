@@ -11,14 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("You clicked submit!");
             } else {
                 let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`);
-                runGame(gameType)
+                runGame(gameType);
             }
-        })
+        });
     }
 
-    runGame("addition")
-})
+    runGame("addition");
+});
 
 // Docstring (Docstrings are used to describe functions, they should go right above where the function name is declared)
 
@@ -36,7 +35,7 @@ function runGame(gameType) {
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
     } else {
-        alert (`Unknown game type: ${gameTYpe}`);
+        alert (`Unknown game type: ${gameType}`);
         throw `Unknown game tyoe: ${gameType}. Aborting!`;
     }
 
@@ -51,12 +50,12 @@ function incrementScore() {};
 function incrementWrongAnswer() {};
 
 function displayAdditionQuestion(operand1, operand2) {
-    
+
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "+";
 
-};
+}
 
 function displaySubtractQuestion() {};
 
